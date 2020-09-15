@@ -15,6 +15,19 @@ class CustomDateFilter extends Filter
     public $component = 'custom-date-filter';
 
     /**
+     * Default data for component
+     *
+     * @var array
+     */
+    public $defaultData = [
+        'altFormat' => 'Y-m-d H:i',
+        'dateFormat' => 'Y-m-d H:i',
+        'enableTime' => true,
+        'enableSeconds' => false,
+        'firstDayOfWeek' => 1,
+    ];
+
+    /**
      * Apply the filter to the given query.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -30,11 +43,26 @@ class CustomDateFilter extends Filter
     /**
      * Get the filter's available options.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function options(Request $request)
     {
         return [];
+    }
+
+    /**
+     * Prepare the filter for JSON serialization.
+     *
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return array_merge(
+            parent::jsonSerialize(),
+            [
+                'options' => array_merge($this->defaultData, $this->options(resolve(Request::class)))
+            ]
+        );
     }
 }
