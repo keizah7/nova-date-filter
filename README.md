@@ -1,3 +1,5 @@
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/keizah7/custom-date-filter.svg)](https://packagist.org/packages/epartment/nova-dependency-container)
+[![Total Downloads](https://img.shields.io/packagist/dt/keizah7/custom-date-filter.svg)](https://packagist.org/packages/epartment/nova-dependency-container)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![HitCount](http://hits.dwyl.io/keizah7/nova-date-filter.svg)
 ![Forks](https://img.shields.io/github/forks/keizah7/nova-date-filter?style=social)
@@ -8,6 +10,8 @@
 Laravel Nova Custom Date Filter
 
 With this package you can set custom date filter `format` and other options, which newest Nova doesn't support.
+
+**More information will be provided soon**
 # Installation
 Install your package in any Nova app
 ```
