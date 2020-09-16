@@ -1,9 +1,13 @@
 {
     "name": "keizah7/custom-date-filter",
-    "description": "A Laravel Nova filter.",
+    "description": "Laravel Nova FIlter Package. Custom date filter",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "filter",
+        "custom",
+        "date",
+        "laravel-nova-filter"
     ],
     "license": "MIT",
     "require": {
