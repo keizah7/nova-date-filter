@@ -1,4 +1,4 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/keizah7/custom-date-filter.svg)](https://packagist.org/packages/epartment/nova-dependency-container)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/keizah7/custom-date-filter.svg)](https://packagist.org/packages/keizah7/custom-date-filter)
 [![Total Downloads](https://img.shields.io/packagist/dt/keizah7/custom-date-filter.svg)](https://packagist.org/packages/epartment/nova-dependency-container)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![HitCount](http://hits.dwyl.io/keizah7/nova-date-filter.svg)
@@ -70,6 +70,34 @@ The filter `apply` method is responsible for modifying the query to achieve the 
 public function apply(Request $request, $query, $value)
 {
     return $query->where('created_at', Carbon::parse($value));
+}
+```
+## Setup
+Default filter setings is:
+```
+'altFormat' => 'Y-m-d H:i'
+'dateFormat' => 'Y-m-d H:i'
+'enableTime' => true
+'enableSeconds' => false
+'firstDayOfWeek' => 1
+```
+You can change them by modify your filter class `options` method:
+```
+/**
+ * Get the filter's available options.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @return array
+ */
+public function options(Request $request)
+{
+    return [
+        'altFormat' => 'Y-m-d H:i:S',
+        'dateFormat' => 'Y-m-d H:i:S',
+        'enableTime' => true,
+        'enableSeconds' => true,
+        'firstDayOfWeek' => 7,
+    ];
 }
 ```
 ## License
