@@ -46,7 +46,7 @@ export default {
             this.$emit('change');
         },
     },
-    
+
     computed: {
         filter() {
             return this.$store.getters[`${this.resourceName}/getFilter`](
@@ -71,7 +71,7 @@ export default {
         },
 
         enableTime() {
-            return this.filter.options.enableTime || true;
+            return this.filter.options.enableTime || false;
         },
 
         enableSeconds() {
