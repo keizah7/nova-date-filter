@@ -1,7 +1,8 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/keizah7/custom-date-filter.svg)](https://packagist.org/packages/keizah7/custom-date-filter)
 [![Total Downloads](https://img.shields.io/packagist/dt/keizah7/custom-date-filter.svg)](https://packagist.org/packages/epartment/nova-dependency-container)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
-![HitCount](http://hits.dwyl.io/keizah7/nova-date-filter.svg)
+[![HitCount](http://hits.dwyl.com/keizah7/nova-date-filter.svg)](http://hits.dwyl.com/keizah7/nova-date-filter)
+![HitCount](https://views.whatilearened.today/views/github/keizah7/nova-date-filter.svg)
 ![Forks](https://img.shields.io/github/forks/keizah7/nova-date-filter?style=social)
 ![Stars](https://img.shields.io/github/stars/keizah7/nova-date-filter?style=social)
 ![Watchers](https://img.shields.io/github/watchers/keizah7/nova-date-filter?style=social)
@@ -11,7 +12,7 @@ Laravel Nova Custom Date Filter
 
 With this package you can set custom date filter `format` and other options, which newest Nova doesn't support.
 
-**More information will be provided soon**
+![custom date filter](https://github.com/keizah7/nova-date-filter/blob/master/data-filter.png?raw=true)
 # Installation
 Install your package in any Nova app
 ```
@@ -57,7 +58,14 @@ public $component = 'select-filter'; // remove this line
 ```
 After completing these steps you can see date filter in your nova resource.
 ## Usage
-The filter `apply` method is responsible for modifying the query to achieve the desired filter state, so you can modify it as you want
+The filter `apply` method is responsible for modifying the query to achieve the desired filter state, so you can modify it as you want or use prepared package methods:
+- `byTime`
+- `byHour`
+- `fromHour`
+- `toHour`
+- `byDay`
+- `fromDay`
+- `toDay`
 ```
 /**
  * Apply the filter to the given query.
@@ -69,10 +77,10 @@ The filter `apply` method is responsible for modifying the query to achieve the 
  */
 public function apply(Request $request, $query, $value)
 {
-    return $query->where('created_at', Carbon::parse($value));
+    return $this->byHour($query, 'created_at', $value);
 }
 ```
-## Setup
+## Settings
 Default filter setings is:
 ```
 'altFormat' => 'Y-m-d H:i'
