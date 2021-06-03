@@ -17,6 +17,8 @@
                 :enable-time="enableTime"
                 :enable-seconds="enableSeconds"
                 :first-day-of-week="firstDayOfWeek"
+                :defaultHour="defaultHour"
+                :defaultMinute="defaultMinute"
                 @input.prevent=""
                 @change="handleChange"
             />
@@ -80,6 +82,14 @@ export default {
 
         firstDayOfWeek() {
             return this.filter.options.firstDayOfWeek || 0;
+        },
+
+        defaultHour() {
+          return this.filter.options.defaultHour || 7;
+        },
+
+        defaultMinute() {
+          return this.filter.options.defaultMinute || 0;
         },
     },
 }

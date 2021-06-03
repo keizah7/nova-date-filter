@@ -80,13 +80,15 @@ public function apply(Request $request, $query, $value)
 }
 ```
 ## Settings
-Default filter setings is:
+Default filter settings is:
 ```
 'altFormat' => 'Y-m-d H:i'
 'dateFormat' => 'Y-m-d H:i'
 'enableTime' => true
 'enableSeconds' => false
 'firstDayOfWeek' => 1
+'defaultHour' => 7
+'defaultMinute' => 0
 ```
 You can change them by modify your filter class `options` method:
 ```
@@ -104,6 +106,8 @@ public function options(Request $request)
         'enableTime' => true,
         'enableSeconds' => true,
         'firstDayOfWeek' => 7,
+        'defaultHour' => 12,
+        'defaultMinute' => 0,
     ];
 }
 ```

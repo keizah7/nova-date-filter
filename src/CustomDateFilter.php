@@ -26,6 +26,8 @@ class CustomDateFilter extends Filter
         'enableTime' => true,
         'enableSeconds' => false,
         'firstDayOfWeek' => 1,
+        'defaultHour' => 7,
+        'defaultMinute' => 0,
     ];
 
     /**
