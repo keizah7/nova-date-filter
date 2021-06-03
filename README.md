@@ -1,7 +1,6 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/keizah7/custom-date-filter.svg)](https://packagist.org/packages/keizah7/custom-date-filter)
 [![Total Downloads](https://img.shields.io/packagist/dt/keizah7/custom-date-filter.svg)](https://packagist.org/packages/epartment/nova-dependency-container)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
-[![HitCount](http://hits.dwyl.com/keizah7/nova-date-filter.svg)](http://hits.dwyl.com/keizah7/nova-date-filter)
 ![HitCount](https://views.whatilearened.today/views/github/keizah7/nova-date-filter.svg)
 ![Forks](https://img.shields.io/github/forks/keizah7/nova-date-filter?style=social)
 ![Stars](https://img.shields.io/github/stars/keizah7/nova-date-filter?style=social)
