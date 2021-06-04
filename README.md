@@ -86,6 +86,8 @@ Default filter setings is:
 'enableTime' => true
 'enableSeconds' => false
 'firstDayOfWeek' => 1
+'defaultHour' => 7
+'defaultMinute' => 0
 ```
 You can change them by modify your filter class `options` method:
 ```
@@ -103,6 +105,8 @@ public function options(Request $request)
         'enableTime' => true,
         'enableSeconds' => true,
         'firstDayOfWeek' => 7,
+        'defaultHour' => 12,
+        'defaultMinute' => 0,
     ];
 }
 ```

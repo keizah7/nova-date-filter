@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Laravel\Nova\Filters\Filter;
 
-class CustomDateFilter extends Filter
+class   CustomDateFilter extends Filter
 {
     /**
      * The filter's component.
@@ -26,6 +26,8 @@ class CustomDateFilter extends Filter
         'enableTime' => true,
         'enableSeconds' => false,
         'firstDayOfWeek' => 1,
+        'defaultHour' => 7,
+        'defaultMinute' => 0,
     ];
 
     /**

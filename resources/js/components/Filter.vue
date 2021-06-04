@@ -19,6 +19,8 @@
                 :first-day-of-week="firstDayOfWeek"
                 @input.prevent=""
                 @change="handleChange"
+                :defaultHour="defaultHour"
+                :defaultMinute="defaultMinute"
             />
         </div>
     </div>
@@ -80,6 +82,14 @@ export default {
 
         firstDayOfWeek() {
             return this.filter.options.firstDayOfWeek || 0;
+        },
+
+        defaultHour() {
+            return this.filter.options.defaultHour || 7;
+        },
+
+        defaultMinute() {
+            return this.filter.options.defaultMinute || 0;
         },
     },
 }

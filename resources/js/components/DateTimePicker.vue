@@ -52,6 +52,14 @@ export default {
       type: Number,
       default: 0,
     },
+    defaultHour: {
+      type: Number,
+      default: 7,
+    },
+    defaultMinute: {
+      type: Number,
+      default: 0,
+    },
   },
 
   data: () => ({ flatpickr: null }),
@@ -82,6 +90,8 @@ export default {
         // static: true,
         time_24hr: !this.twelveHourTime,
         locale: { firstDayOfWeek: this.firstDayOfWeek },
+        defaultHour: this.defaultHour,
+        defaultMinute: this.defaultMinute,
       })
     },
 
